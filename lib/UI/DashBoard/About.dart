@@ -134,6 +134,7 @@ class _AboutState extends State<About> {
         child: Column(
           children: [
              Padding(
+
                padding: const EdgeInsets.only(top: 20),
                child: Image.asset("assets/Profile/grpic.jpg",
                  height: 150,
