@@ -1,8 +1,7 @@
 //import links
 import 'package:flutter/material.dart';
+import 'package:javed_computer/UI/DashBoard/About.dart';
 import 'package:javed_computer/UI/DashBoard/Profile.dart';
-import 'package:javed_computer/UI/User/PhoneNumber.dart';
-import 'package:javed_computer/UI/User/UserScreen2.dart';
 
 
 import 'UI/DashBoard/BottonBar.dart';

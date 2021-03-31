@@ -12,10 +12,8 @@ class NewsScreen extends StatefulWidget {
 }
 
 class _NewsScreenState extends State<NewsScreen> {
+   Uri FEED_URL=Uri.parse('https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss');
 
-
-  static const String FEED_URL =
-      'https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss';
   RssFeed _feed;
   String _title;
   static const String loadingFeedMsg = 'Loading Feed...';
