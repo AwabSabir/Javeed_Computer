@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:javed_computer/UI/User/LoginScreen.dart';
 import 'package:javed_computer/UI/User/RegistrationPAge.dart';
-import 'package:javed_computer/Weights/Weights.dart';
+import 'package:javed_computer/Values/Values.dart';
 
 class MainSCreen extends StatefulWidget {
   @override
@@ -14,7 +14,7 @@ class _MainSCreenState extends State<MainSCreen> {
     return Scaffold(
       backgroundColor: Colors.blue,
       body: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(Margins.bodyPadding),
         child: Center(
           child: Column(
 
@@ -24,10 +24,10 @@ class _MainSCreenState extends State<MainSCreen> {
               Container(
                 width: 100,
                 height: 100,
-                child: Image.asset("assets/splach.png"),
+                child: Image.asset(ImagesLink.splachImg),
               ),
               Container(margin: EdgeInsets.only(top: 20),),
-              Text("Welcome to javed Computer \n get lot of Exating things", style: TextStyle(
+              Text(Strings.mainWelcomeTx, style: TextStyle(
                 color:Colors.white,
                 fontFamily: 'Roboto',
                 fontSize: 30,

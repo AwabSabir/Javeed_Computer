@@ -3,6 +3,7 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:javed_computer/UI/MainScreen.dart';
 import 'package:javed_computer/UI/User/LoginScreen.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:javed_computer/Values/Values.dart';
 class splachLogo extends StatelessWidget {
   String pathImage;
   splachLogo(String pathImage){
@@ -14,7 +15,7 @@ class splachLogo extends StatelessWidget {
       width:MediaQuery.of(context).size.width,
       height: 200,
       child: AnimatedSplashScreen(
-        backgroundColor: Colors.blue,
+        backgroundColor:ColorsList.appBgColor ,
           splash: pathImage,
           splashTransition: SplashTransition.sizeTransition,
           nextScreen: MainSCreen(),

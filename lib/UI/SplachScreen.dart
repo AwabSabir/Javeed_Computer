@@ -1,10 +1,7 @@
-import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:javed_computer/UI/MainScreen.dart';
-import 'package:javed_computer/Weights/Weights.dart';
 import 'dart:ui';
-import 'package:page_transition/page_transition.dart';
+import 'package:javed_computer/Values/Values.dart';
 class SplachScreen extends StatefulWidget {
 
   @override
@@ -31,15 +28,15 @@ class _SplachScreenState extends State<SplachScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: ColorsList.appBgColor,
       body: Center(
         child: Column(
          mainAxisAlignment: MainAxisAlignment.center,
            // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-                      splachLogo("assets/splach.png"),
-              Text("Javed Pc", style: TextStyle(
-                color: Colors.white,
+                      splachLogo(ImagesLink.splachImg),
+              Text(Strings.shopeName, style: TextStyle(
+                color: ColorsList.whiteColor,
                 fontSize: 50,
                 fontFamily: 'Roboto'
               ),)

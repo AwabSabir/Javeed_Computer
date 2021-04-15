@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:javed_computer/Weights/DashboardWeights/ProfileWidget.dart';
@@ -9,7 +10,7 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-
+  File _path;
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([
@@ -39,6 +40,7 @@ class _ProfileState extends State<Profile> {
             ProfileBackground(
               email: "awabsabir373@gmail.com",
               profileNAme: "Awab",
+              imgePAth:getImagePath,
             ),
             BodyProflile()
           ],
@@ -58,10 +60,15 @@ class _ProfileState extends State<Profile> {
       child: ListView(
         scrollDirection: Axis.vertical,
         children: [
-          ProfileCards(
-            icon: Icon(Icons.person),
-            text: "Profile",
-            iconbg: Colors.green,
+          GestureDetector(
+            onTap:  (){
+              print(_path);
+            },
+            child: ProfileCards(
+              icon: Icon(Icons.person),
+              text: "Profile",
+              iconbg: Colors.green,
+            ),
           ),
           ProfileCards(
             icon: Icon(Icons.settings),
@@ -88,5 +95,12 @@ class _ProfileState extends State<Profile> {
       ),
     );
   }
+  
+  void getImagePath(File file){
+    _path=file;
+}
+
+
+
 
 }

@@ -3,21 +3,23 @@ import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:javed_computer/UI/DashBoard/Profile.dart';
 class ProfileBackground extends StatefulWidget {
+
   String profileNAme;
   String email;
-  Function() uploadImage;
-
-  ProfileBackground({String profileNAme,String email,Function() uploadImage}){
+  Function imgePAth;
+  ProfileBackground({String profileNAme,String email, Function imgePAth}){
     this.profileNAme=profileNAme;
     this.email=email;
-    this.uploadImage=uploadImage;
+    this.imgePAth=imgePAth;
   }
   @override
   _ProfileBackgroundState createState() => _ProfileBackgroundState();
 }
 
 class _ProfileBackgroundState extends State<ProfileBackground> {
+  VoidCallback pathSetter;
   File _ImagePath ;
   Image image=Image.asset("assets/Profile/profile.png", height: 120, width: 120,);
   final imgPicker= ImagePicker();
@@ -145,6 +147,8 @@ class _ProfileBackgroundState extends State<ProfileBackground> {
     setState(() {
       if(pickedFile !=null){
         setImagePath(File(pickedFile.path));
+        widget.imgePAth(File(pickedFile.path));
+
       }
       else{
         print("Not Image Picked");
@@ -166,6 +170,7 @@ class _ProfileBackgroundState extends State<ProfileBackground> {
         return image;
       }
   }
+
 }
 
 

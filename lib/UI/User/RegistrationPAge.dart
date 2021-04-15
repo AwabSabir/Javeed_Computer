@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:javed_computer/ValidationMixen/Validtion_Maxin.dart';
 import 'package:javed_computer/Weights/UserWeights/RegistrationScreenWeights.dart';
+import 'package:javed_computer/Values/Values.dart';
 
 import 'UserScreen2.dart';
 
@@ -28,11 +29,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> with Validation
   Widget build(BuildContext context) {
     return Scaffold(
       key: globalKey,
-      backgroundColor: Colors.blue,
+      backgroundColor: ColorsList.appBgColor,
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(Margins.bodyPadding),
             child: Form(
               key: formKey,
               child: Column(
@@ -48,14 +49,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> with Validation
                   ),
                   Container(
                     margin: EdgeInsets.only( bottom: 20),
-                    child: Text("Register Your Self", style: TextStyle(
+                    child: Text(Strings.regTx, style: TextStyle(
                       fontSize: 30,
                       color: Colors.white
                     ),),
                   ),
 
                   InputText(
-                    label: "First Name",
+                    label: Strings.namelabelfName,
                     placeHolder: "Jhon",
                     suffixICon: Icon(isFname ? Icons.check_circle : Icons.error,
                       color: isName ? Colors.white : Colors.red,
@@ -67,7 +68,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> with Validation
                   ),
                   Container(margin: EdgeInsets.only(top: 20),),
                   InputText(
-                    label: "Last Name",
+                    label: Strings.namelabel_lName,
                     placeHolder: "Stephan",
                     suffixICon: Icon(isName ? Icons.check_circle : Icons.error,
                       color: isName ? Colors.white : Colors.red,
@@ -79,7 +80,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> with Validation
                   ),
                   Container(margin: EdgeInsets.only(top: 20),),
                   InputText(
-                    label: "Email",
+                    label: Strings.passwordLabel,
                     placeHolder: "you@example.com",
                     suffixICon: Icon(emailError ? Icons.check_circle : Icons.error,
                       color: emailError ? Colors.white : Colors.red,
@@ -91,7 +92,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> with Validation
                   ),
                   Container(margin: EdgeInsets.only(top: 20),),
                   PasswordTF(
-                    label: "Password",
+                    label: Strings.cPasswordLabel,
                    suffixICon: Icon(Icons.visibility_off,color: Colors.white,),
                     placeHolder: "Password",
                     hindShowPassword: true,
@@ -100,7 +101,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> with Validation
                   ),
                   Container(margin: EdgeInsets.only(top: 20),),
                   PasswordTF(
-                    label: "Confrom Password",
+                    label: Strings.cPasswordLabel,
                     suffixICon: Icon(Icons.visibility_off,color: Colors.white,),
                     placeHolder: "C password",
                     hindShowPassword: true,

@@ -108,7 +108,6 @@ class _NewsScreenState extends State<NewsScreen> {
          borderRadius: BorderRadius.circular(20)
        ),
       child: Image.network(url,
-
       ),
     );
   }

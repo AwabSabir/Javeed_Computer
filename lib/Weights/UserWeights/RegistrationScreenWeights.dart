@@ -2,6 +2,7 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:javed_computer/Values/ColorsList.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
 
 class InputText extends StatefulWidget {
@@ -34,6 +35,9 @@ class _InputTextState extends State<InputText> {
   }
   Widget InputTf(){
     return TextFormField(
+      style: TextStyle(
+        color: Colors.white,
+      ),
       maxLength: 56,
       cursorColor: Colors.lightBlueAccent,
       keyboardType: widget.textInputType,
@@ -108,13 +112,16 @@ class _PasswordTFState extends State<PasswordTF> {
   }
   Widget PasswrodInputTf() {
     return TextFormField(
+      style: TextStyle(
+        color: ColorsList.textinputColor,
+      ),
       obscureText:widget.hindShowPassword,
       maxLength: 20,
       cursorColor: Colors.lightBlueAccent,
       decoration: InputDecoration(
         labelText:widget.label,
         labelStyle: TextStyle(
-          color: Colors.white,
+          color: ColorsList.textinputColor,
           fontSize: 20,
         ),
         helperText: "*Required",
